@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Here we Go</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            background-image: linear-gradient(to right, #382456, #890d26);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            width: 30%;
+            height: 40%;
+            /* background-color: #0a2446; */
+            background-image: linear-gradient(to right, #DC143C, #52337c );
+            border-radius: 20px;
+            box-shadow: 5px 10px 10px rgba(0,0,0,0.2);
+            text-align: center;
+            color: white;
+            padding: 4% 3%;
+        }
+        .text{
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            /* border: 1px solid white; */
+            height: 25%;
+            box-shadow: 5px 8px 10px 10px rgba(0,0,0,0.2);
+            border-radius: 15px;
+            /* background-color: #092141; */
+        }
+        .buttons{
+            /* border: 1px solid white; */
+            display: flex;
+            justify-content: left;
+            height: 70%;
+            align-items: center;
+            font-size:1.4rem;
+            gap: 3vw;
+        }
+        .yes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid white; */
+            width: 35%;
+            height: 16%;
+            border-radius: 10px;
+            /* background-color: #092141; */
+            box-shadow: 5px 2px 10px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        .no{
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid white; */
+            width: 8%;
+            height: 5%;
+            right: 36%;
+            border-radius: 10px;
+            /* background-color: #092141; */
+            box-shadow: 5px 2px 10px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        .thnx{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid white; */
+            width: 25%;
+            height: 16%;
+            border-radius: 10px;
+            /* background-color: #092141; */
+            box-shadow: 2px 10px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease-in-out;
+        }
+        .no:hover{
+            /* background-color: #071830; */
+            transform: scale(0.9);
+            color: rgb(164, 164, 164);
+            cursor: pointer;
+        }
+        .thnx:hover{
+            background-color: #071830;
+            transform: scale(0.9);
+            color: rgb(164, 164, 164);
+            cursor: pointer;
+        }
+        .yes:hover{
+            /* background-color: #071830; */
+            transform: scale(0.9);
+            color: rgb(164, 164, 164);
+            cursor: pointer;
+        }
+        @media(max-width: 800px){
+            .main{
+                width: 100%;
+                height: 50%;
+                padding-left: 10%;
+            }
+            .buttons{
+                gap: 10vw;
+            }
+            .thnx{
+                width: 30%;
+                font-size: 70%;
+            }
+            .yes{
+                width: 40%;
+            }
+            .no{
+                right: 15%;
+                width: 23%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="text">
+                <h1>I loVe YOu</h1>
+            </div>
+            <div class="buttons">
+                <!-- <div onclick=showNot() class="thnx">Thank you</div> -->
+                <div onclick=showAlert() class="yes">Yes</div>
+                <div onclick=move() class="no">No</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    // const thnx = document.querySelectorAll('.thnx');
+    const yes = document.querySelectorAll('.yes');
+    const no = document.querySelectorAll('.no');
+    
+   function move(){
+    for(let i=0; i<1; i--){
+        let randomXPosition = Math.floor(Math.random() * 90);
+        let randomYPosition = Math.floor(Math.random() * 90); 
+        no[i].style.right = randomXPosition + '%';
+        no[i].style.top = randomYPosition + '%';
+    }
+}
+function showAlert(){
+    alert("I LoVE You too😙✌️🫶");
+}
+
+// function showNot(){
+//     // alert("NO I don't need this");
+// }
+</script>
+</html>
